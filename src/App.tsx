@@ -1,7 +1,4 @@
-import { useState, Suspense, useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Environment, Float, MeshDistortMaterial } from '@react-three/drei';
-import * as THREE from 'three';
+import { useState } from 'react';
 import LoadingScreen from './components/LoadingScreen';
 import About from './components/About';
 import Projects from './components/Projects';
@@ -12,51 +9,48 @@ import Achievements from './components/Achievements';
 import Contact from './components/Contact';
 import './App.css';
 
-const AnimatedSphere = () => {
-  const meshRef = useRef<THREE.Mesh>(null);
-  
-  useFrame((state) => {
-    if (meshRef.current) {
-      meshRef.current.rotation.x = state.clock.elapsedTime * 0.1;
-      meshRef.current.rotation.y = state.clock.elapsedTime * 0.15;
-    }
-  });
+const floatingSymbolsData = [
+  { symbol: '</', left: 5, delay: 0, duration: 25, size: 1.2, opacity: 0.15 },
+  { symbol: '/>', left: 15, delay: 3, duration: 22, size: 1.0, opacity: 0.12 },
+  { symbol: '{', left: 25, delay: 7, duration: 28, size: 1.4, opacity: 0.18 },
+  { symbol: '}', left: 35, delay: 2, duration: 20, size: 0.9, opacity: 0.14 },
+  { symbol: '()', left: 45, delay: 12, duration: 30, size: 1.1, opacity: 0.16 },
+  { symbol: '=>', left: 55, delay: 5, duration: 24, size: 1.3, opacity: 0.13 },
+  { symbol: '[]', left: 65, delay: 9, duration: 26, size: 1.0, opacity: 0.17 },
+  { symbol: '&&', left: 75, delay: 15, duration: 22, size: 1.2, opacity: 0.11 },
+  { symbol: '||', left: 85, delay: 1, duration: 28, size: 0.85, opacity: 0.15 },
+  { symbol: '===', left: 95, delay: 8, duration: 32, size: 1.1, opacity: 0.14 },
+  { symbol: 'const', left: 10, delay: 18, duration: 35, size: 0.9, opacity: 0.12 },
+  { symbol: 'let', left: 30, delay: 11, duration: 27, size: 1.0, opacity: 0.16 },
+  { symbol: 'function', left: 50, delay: 4, duration: 30, size: 0.8, opacity: 0.13 },
+  { symbol: 'return', left: 70, delay: 14, duration: 25, size: 0.85, opacity: 0.15 },
+  { symbol: 'import', left: 90, delay: 6, duration: 28, size: 0.9, opacity: 0.11 },
+  { symbol: 'async', left: 20, delay: 16, duration: 32, size: 1.0, opacity: 0.14 },
+  { symbol: 'await', left: 40, delay: 10, duration: 26, size: 0.95, opacity: 0.17 },
+  { symbol: '< >', left: 60, delay: 13, duration: 24, size: 1.15, opacity: 0.12 },
+  { symbol: '{ }', left: 80, delay: 19, duration: 29, size: 1.05, opacity: 0.16 },
+  { symbol: '//', left: 8, delay: 17, duration: 31, size: 1.1, opacity: 0.13 },
+];
 
+const FloatingSymbols = () => {
   return (
-    <Float speed={2} rotationIntensity={0.5} floatIntensity={1}>
-      <mesh ref={meshRef} scale={2.5}>
-        <icosahedronGeometry args={[1, 4]} />
-        <MeshDistortMaterial
-          color="#6366f1"
-          attach="material"
-          distort={0.4}
-          speed={2}
-          roughness={0.2}
-          metalness={0.8}
-        />
-      </mesh>
-    </Float>
-  );
-};
-
-const Scene = () => {
-  return (
-    <>
-      <ambientLight intensity={0.3} />
-      <pointLight position={[10, 10, 10]} intensity={1} color="#6366f1" />
-      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#06b6d4" />
-      <pointLight position={[0, 10, -10]} intensity={0.3} color="#f472b6" />
-      <AnimatedSphere />
-      <OrbitControls 
-        enableZoom={false} 
-        enablePan={false}
-        autoRotate
-        autoRotateSpeed={0.5}
-        maxPolarAngle={Math.PI / 2}
-        minPolarAngle={Math.PI / 2}
-      />
-      <Environment preset="night" />
-    </>
+    <div className="floating-symbols">
+      {floatingSymbolsData.map((item, index) => (
+        <span 
+          key={index} 
+          className="floating-symbol"
+          style={{
+            left: `${item.left}%`,
+            animationDelay: `${item.delay}s`,
+            animationDuration: `${item.duration}s`,
+            fontSize: `${item.size}rem`,
+            opacity: item.opacity,
+          }}
+        >
+          {item.symbol}
+        </span>
+      ))}
+    </div>
   );
 };
 
@@ -76,12 +70,14 @@ function App() {
 
       {!loading && (
         <>
-          <div className="three-canvas-container">
-            <Canvas>
-              <Suspense fallback={null}>
-                <Scene />
-              </Suspense>
-            </Canvas>
+          <div className="background-container">
+            <div className="grid-overlay"></div>
+            <FloatingSymbols />
+            <div className="gradient-orbs">
+              <div className="orb orb-1"></div>
+              <div className="orb orb-2"></div>
+              <div className="orb orb-3"></div>
+            </div>
           </div>
 
           <div className="overlay-content">

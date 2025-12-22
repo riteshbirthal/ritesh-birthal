@@ -6,13 +6,12 @@ A modern, responsive portfolio website built with React, TypeScript, and Three.j
 
 - **Frontend:** React 19, TypeScript
 - **Build Tool:** Vite
-- **3D Graphics:** Three.js, React Three Fiber, React Three Drei
-- **Styling:** CSS with CSS Variables
+- **Styling:** CSS with CSS Variables & Animations
 - **Linting:** ESLint with TypeScript support
 
 ## Features
 
-- Interactive 3D animated background with floating icosahedron
+- Developer-themed animated background with floating code symbols
 - Glassmorphic UI design with smooth animations
 - Fully responsive design (desktop, tablet, mobile)
 - Hamburger menu navigation for mobile devices
