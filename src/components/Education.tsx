@@ -130,7 +130,7 @@ const Education = () => {
               <p>Access my course completion certificates and credentials</p>
             </div>
           </div>
-          <a href="https://drive.google.com/drive/folders/YOUR_CERTIFICATES_FOLDER_ID" target="_blank" rel="noopener noreferrer" className="certificates-button">
+          <a href="https://drive.google.com/drive/folders/1g6tog7RRSCWncD0CJLiLzum8OBGsBBcz?usp=sharing" target="_blank" rel="noopener noreferrer" className="certificates-button">
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path d="M7.71 3.5L1.15 15l4.58 7.5h13.54l4.58-7.5L17.29 3.5H7.71zm-.36 1.5h9.3l5.07 9.5-3.93 6.5H5.21l-3.93-6.5L6.35 5z"/>
             </svg>
