@@ -14,7 +14,7 @@ const projects = [
     badge: 'Full Stack',
     description: 'Real-time chat application with WebSocket-based instant messaging, connection management for active sessions, and efficient message broadcasting.',
     tech: ['React', 'FastAPI', 'WebSockets'],
-    github: 'https://github.com/riteshbirthal/chitchat-live',
+    github: 'https://github.com/riteshbirthal/Projects/tree/master/Full-Stack/ChitChat%20Live',
     live: null,
   },
   {
@@ -30,7 +30,7 @@ const projects = [
     badge: 'Computer Vision',
     description: 'Computer vision-based virtual mouse using hand gesture tracking. Controls cursor movement and mouse clicks through real-time image processing.',
     tech: ['Python', 'OpenCV', 'MediaPipe', 'PyAutoGUI'],
-    github: 'https://github.com/riteshbirthal/virtual-mouse',
+    github: 'https://github.com/riteshbirthal/Projects/tree/master/Python/Others/Virtual%20Mouse',
     live: null,
   },
   {
@@ -38,7 +38,7 @@ const projects = [
     badge: 'AI/ML',
     description: 'Rock-Paper-Scissors game with real-time gesture recognition. Implemented CV pipelines and game logic with smooth rendering.',
     tech: ['Python', 'Pygame', 'OpenCV', 'MediaPipe'],
-    github: 'https://github.com/riteshbirthal/gesture-game',
+    github: 'https://github.com/riteshbirthal/Projects/tree/master/Python/Others/Rock-Paper-Scissor',
     live: null,
   },
   {
@@ -46,7 +46,7 @@ const projects = [
     badge: 'Full Stack',
     description: 'Full-stack web application with secure authentication, food ordering system, and table pre-booking functionality.',
     tech: ['Python', 'Django', 'PostgreSQL'],
-    github: 'https://github.com/riteshbirthal/restaurant-app',
+    github: 'https://github.com/riteshbirthal/Projects/tree/master/Python/Django/restaurant_app',
     live: null,
   },
 ];
