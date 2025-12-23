@@ -2,6 +2,14 @@ import './Projects.css';
 
 const projects = [
   {
+    name: 'AI Quote Reel Bot',
+    badge: 'AI/ML',
+    description: 'Automated YouTube Shorts generator using Google Gemini AI. Creates motivational quote reels with AI-generated quotes, text-to-speech voiceover, background music, and YouTube-ready metadata.',
+    tech: ['Python', 'Gemini AI', 'FFmpeg', 'Edge-TTS', 'Docker'],
+    github: 'https://github.com/riteshbirthal/AI-Quote-Generator',
+    live: null,
+  },
+  {
     name: 'Data Traceability Platform',
     badge: 'Professional',
     description: 'End-to-end system to track, audit, and debug data flow across distributed microservices. Backend in FastAPI, real-time events via Kafka, React dashboard for visualization.',
