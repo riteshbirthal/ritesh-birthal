@@ -2,6 +2,14 @@ import './Projects.css';
 
 const projects = [
   {
+    name: 'Mock Mitra',
+    badge: 'Full Stack',
+    description: 'Comprehensive mock test platform for government exam preparation (SSC, Banking, Railway, UPSC). Features 20,000+ questions, timed tests, detailed solutions, and subject-wise study materials with randomized question sets.',
+    tech: ['React', 'FastAPI', 'MongoDB', 'TypeScript'],
+    github: 'https://github.com/riteshbirthal/mock-mitra',
+    live: 'https://mock-mitra.onrender.com/',
+  },
+  {
     name: 'Multiplayer Sudoku',
     badge: 'Full Stack',
     description: 'Real-time multiplayer Sudoku game with lobby system, live chat, and leaderboard. Players compete to solve the same puzzle with rankings showing gold, silver, and bronze trophies.',
