@@ -2,6 +2,14 @@ import './Projects.css';
 
 const projects = [
   {
+    name: 'Multiplayer Sudoku',
+    badge: 'Full Stack',
+    description: 'Real-time multiplayer Sudoku game with lobby system, live chat, and leaderboard. Players compete to solve the same puzzle with rankings showing gold, silver, and bronze trophies.',
+    tech: ['React', 'FastAPI', 'WebSockets', 'MongoDB'],
+    github: 'https://github.com/riteshbirthal/Multiplayer-Sudoku',
+    live: 'https://multiplayer-sudoku-n9bt.onrender.com/',
+  },
+  {
     name: 'AI Quote Reel Bot',
     badge: 'AI/ML',
     description: 'Automated YouTube Shorts generator using Google Gemini AI. Creates motivational quote reels with AI-generated quotes, text-to-speech voiceover, background music, and YouTube-ready metadata.',
