@@ -111,8 +111,7 @@ function App() {
 
             <footer className="footer">
               <div className="footer-content">
-                <p>&copy; {new Date().getFullYear()} Ritesh Birthal. All Rights Reserved.</p>
-                <p className="footer-tagline">Built with passion and creativity</p>
+                <p>&copy; {new Date().getFullYear()} Ritesh Birthal - Full Stack Developer. All Rights Reserved.</p>
               </div>
             </footer>
           </div>
