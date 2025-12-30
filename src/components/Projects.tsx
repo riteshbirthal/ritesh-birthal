@@ -26,6 +26,14 @@ const projects = [
     live: null,
   },
   {
+    name: 'NightDrift',
+    badge: 'Frontend',
+    description: 'Hypnotic spiral visualization web app for sleep induction and relaxation. Features procedurally generated SVG/Canvas patterns with exponential spirals, safe animations, and customizable controls.',
+    tech: ['React', 'TypeScript', 'Canvas', 'SVG', 'Vite'],
+    github: 'https://github.com/riteshbirthal/NightDrift',
+    live: "https://night-drift.vercel.app/",
+  },
+  {
     name: 'Data Traceability Platform',
     badge: 'Professional',
     description: 'End-to-end system to track, audit, and debug data flow across distributed microservices. Backend in FastAPI, real-time events via Kafka, React dashboard for visualization.',
