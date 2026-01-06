@@ -2,6 +2,14 @@ import './Projects.css';
 
 const projects = [
   {
+    name: 'FlowForge',
+    badge: 'Full Stack',
+    description: 'Visual pipeline builder for creating node-based workflows. Features 9 node types, drag-and-drop interface, dynamic text node with variable detection, DAG validation, and localStorage persistence.',
+    tech: ['React', 'ReactFlow', 'FastAPI', 'Zustand'],
+    github: 'https://github.com/riteshbirthal/FlowForge',
+    live: 'https://flowforge-pipeline-builder.onrender.com/',
+  },
+  {
     name: 'Mock Mitra',
     badge: 'Full Stack',
     description: 'Comprehensive mock test platform for government exam preparation (SSC, Banking, Railway, UPSC). Features 20,000+ questions, timed tests, detailed solutions, and subject-wise study materials with randomized question sets.',
