@@ -2,6 +2,14 @@ import './Projects.css';
 
 const projects = [
   {
+    name: 'ASCIIer',
+    badge: 'Full Stack',
+    description: 'Transform images and videos into ASCII art. Real-time conversion with customizable character width (60-420), ASCII text download, side-by-side comparison, and file cleanup management. Supports multiple formats.',
+    tech: ['React', 'Express', 'Sharp', 'FFmpeg', 'Multer'],
+    github: 'https://github.com/riteshbirthal/asciier',
+    live: 'https://asciier.vercel.app/',
+  },
+  {
     name: 'FlowForge',
     badge: 'Full Stack',
     description: 'Visual pipeline builder for creating node-based workflows. Features 9 node types, drag-and-drop interface, dynamic text node with variable detection, DAG validation, and localStorage persistence.',
